@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+            .cart{
+                background-image: url('images/white.jpg');
+                background-color: whitesmoke;
+                border:dashed;
+                
+                border-width:0.5px;
+                height:1700px;
+                width:450px;
+                float:right;
+            }
+            .item1{
+             background-color:rgba(0,0,0,0.15);
+             height:330px;
+             width:280px
+            }
+            .one{
+                color:red;
+            }
+            #quantity{
+                text-align: center;
+            }
+            #cart{
+                color:black;
+            }#cart1{
+                color:yellowgreen;
+            }
+            #cart2{
+                color:red;
+            }
+            #cart3{
+                color:blue;
+            }
+            #cart4{
+                color:darkred;
+            }
+            #cart5{
+                color:slateblue;
+            }
+            #cart6{
+                color:violet;
+            }
+            #cart7{
+                color:springgreen;
+            }
+            #cart8{
+                color:indigo;
+            }
+            body{
+                 background-image: url('images/wh1.jpg');
+                
+              
+            }
+            H3{
+                color:red;
+            }
+            #ra,#ra1,#ra2,#ra3,#ra4,#ra5,#ra6,#ra7,#ra8{
+                color:blue;
+            }
+            #total{
+                color:black;
+            }
+            .total{
+                color:blue;
+                font-size:30px;
+            }
+            hr{
+                color:red;
+            }
+            .button {
+            background-color:skyblue;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            box-shadow: 0 5px #999;
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            outline: none;
+         }
+         .button:hover {
+            background-color: blue;
+         }
+         .button:active {
+            background-color: orange;
+            box-shadow: 0 5px gray;
+            transform: translateY(2px);
+         }
+         .item1:hover{
+              transform: scale(1.1);
+              background-color:appworkspace;
+        }
+         input::-webkit-outer-spin-button,
+               input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+               margin: 0;
+}
+         input[type=number] {
+                  -moz-appearance: textfield;
+               }
+        </style>
+        <script>
+           
+             
+            function valid(){     
+             var name=document.getElementById("chicken").innerHTML.valueOf();
+           document.getElementById("cart").innerHTML=name; 
+           var ra=document.getElementById("rate").innerHTML.valueOf();
+                var q=document.getElementById("quan").value; 
+              var price=q * 150;
+             
+              
+           document.getElementById("ra").innerHTML='<button id="sub" onclick="return sm();">-</button><input type="number" id="quantity" value="'+q+'" style="width:30px"><button id="sub" onclick="return sp()">+</button>*150 ='+price;
+          
+           var img = new Image(); 
+           var div = document.getElementById('x'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><img src="'+img.src+'" height="50" width="50" />';  
+           div.innerHTML += '<button onclick="return remove()" style="background-color:whitesmoke;color:red;">click to remove</button></tr></table><hr> ';
+                     }; 
+                        img.src = 'images/images.jpg'; 
+                        
+                         document.getElementById('added').value ='ITEM ADDED ';
+                         
+                         
+                 document.getElementById("added").onclick = function() {
+                         this.disabled = true;
+             }
+            
+
+                         
+}
+             
+         
+             function remove() { 
+                var remove=document.getElementById("cart"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x"); 
+                rem.parentNode.removeChild(rem);
+                var remr=document.getElementById("ra"); 
+                remr.parentNode.removeChild(remr); 
+                 document.getElementById("added").onclick = function() {
+                         this.disabled= false;
+                         
+             }      
+             alert("ITEM WILL BE REMOVED FROM CART");
+            } 
+               
+            function sm(){
+               var q=document.getElementById("quantity").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra").innerHTML='<button id="sub" onclick="return sm()">-</button><input type="number" id="quantity" value="'+(q-1)+'" style="width:50px; text-align: center;"><button id="sub" onclick="return sp()">+</button>*150 ='+sm;
+               
+               document.getElementById("quan").value=+(+q-1);
+                 }
+            function sp(){
+               var q=document.getElementById("quantity").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra").innerHTML='<button id="sub" onclick="return sm()">-</button><input type="number" id="quantity" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp()">+</button>*150 ='+sm;
+          
+           document.getElementById("quan").value=+(+q+1);
+         }
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+            
+             function valid1(){
+                  
+                  var name1=document.getElementById("chickenbread").innerHTML.valueOf();
+                   document.getElementById("cart1").innerHTML=name1;
+                    var ra1=document.getElementById("rate").innerHTML.valueOf();
+                    var q1=document.getElementById("quan1").value;
+              
+              var price1=q1 * 150;
+                  
+                
+           document.getElementById("ra1").innerHTML='<button id="sub" onclick="return sm1()">-</button><input type="number" id="quantity1" value="'+q1+'" style="width:30px"><button id="sub" onclick="return sp1()">+</button>*150 ='+price1;
+           
+           
+                var img = new Image(); 
+           var div = document.getElementById('x1'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />';
+          div.innerHTML += '<button onclick="return remove1()" style="background-color:whitesmoke;color:red;">click to remove</button> </td></tr></table><hr>';
+                     }; 
+                        img.src = 'images/chickenbread.jpg'; 
+                        
+                        
+                          document.getElementById('added1').value ='ITEM ADDED ';
+                          
+                          
+                           document.getElementById("added1").onclick = function() {
+                         this.disabled = true;
+             }
+         }
+             function remove1() {        
+                var remove=document.getElementById("cart1"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x1"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra1"); 
+                remr.parentNode.removeChild(remr);  
+       
+              alert("ITEM WILL BE REMOVED FROM CART");
+            }
+            function sm1(){
+               var q=document.getElementById("quantity1").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra1").innerHTML='<button id="sub" onclick="return sm1()">-</button><input type="number" id="quantity1" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp1()">+</button>*150 ='+sm;
+            document.getElementById("quan1").value=+(+q-1);
+    }
+            function sp1(){
+               var q=document.getElementById("quantity1").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra1").innerHTML='<button id="sub" onclick="return sm1()">-</button><input type="number" id="quantity1" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp1()">+</button>*150 ='+sm;
+           document.getElementById("quan1").value=+(+q+1);
+     }
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+              function valid2(){
+                 var name2=document.getElementById("tomato").innerHTML.valueOf();
+                 document.getElementById("cart2").innerHTML=name2;
+                  var ra2=document.getElementById("rate").innerHTML.valueOf();
+                  var q2=document.getElementById("quan2").value;
+                
+             var price2=q2*150;
+              
+              
+           document.getElementById("ra2").innerHTML='<button id="sub" onclick="return sm2()">-</button><input type="number" id="quantity2" value="'+q2+'" style="width:30px"><button id="sub" onclick="return sp2()">+</button>*150 ='+price2;
+           
+           
+          
+                 var img = new Image(); 
+           var div = document.getElementById('x2'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />'; 
+          div.innerHTML += '<button onclick="return remove2()" style="background-color:whitesmoke;color:red;">click to remove</button> </td></tr></table><hr>';
+ 
+                     }; 
+                        img.src = 'images/tomato.jpg'; 
+                        
+                        
+                          document.getElementById('added2').value ='ITEM ADDED ';
+                          
+                          
+                           document.getElementById("added2").onclick = function() {
+                                  this.disabled = true;
+             }
+         }
+              function remove2() { 
+
+                var remove=document.getElementById("cart2"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x2"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra2"); 
+                remr.parentNode.removeChild(remr);
+              
+             alert("ITEM WILL BE REMOVED FROM CART");
+
+            } 
+            function sm2(){
+               var q=document.getElementById("quantity2").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra2").innerHTML='<button id="sub" onclick="return sm2()">-</button><input type="number" id="quantity2" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp2()">+</button>*150 ='+sm;
+           document.getElementById("quan2").value=+(+q-1);
+        }
+            function sp2(){
+               var q=document.getElementById("quantity2").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra2").innerHTML='<button id="sub" onclick="return sm2()">-</button><input type="number" id="quantity2" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp2()">+</button>*150 ='+sm;
+            document.getElementById("quan2").value=+(+q+1);
+    }
+            
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+              function valid3(){
+                 
+                 var name3=document.getElementById("cheese").innerHTML.valueOf();
+                  document.getElementById("cart3").innerHTML=name3;
+                   var ra3=document.getElementById("rate").innerHTML.valueOf();
+                   var q3=document.getElementById("quan3").value;
+              
+              var price3=q3 * 150;
+              
+               
+           document.getElementById("ra3").innerHTML='<button id="sub" onclick="return sm3()">-</button><input type="number" id="quantity3" value="'+q3+'" style="width:30px"><button id="sub" onclick="return sp3()">+</button>*150 ='+price3;
+           
+        
+          
+                  var img = new Image(); 
+             var div = document.getElementById('x3'); 
+                    img.onload = function() { 
+           div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />'; 
+            div.innerHTML += '<button onclick="return remove3()" style="background-color:whitesmoke;color:red;">click to remove</button></td></tr></table><hr> ';
+ 
+                     }; 
+                  img.src = 'images/cheese.jpg'; 
+                  
+                  
+                    document.getElementById('added3').value ='ITEM ADDED ';
+                    
+                    
+                     document.getElementById("added3").onclick = function() {
+                      this.disabled = true;
+             }
+         }
+             function remove3() { 
+
+                var remove=document.getElementById("cart3"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x3"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra3"); 
+                remr.parentNode.removeChild(remr);
+            alert("ITEM WILL BE REMOVED FROM CART");     
+        
+            } 
+            function sm3(){
+               var q=document.getElementById("quantity3").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra3").innerHTML='<button id="sub" onclick="return sm3()">-</button><input type="number" id="quantity3" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp3()">+</button>*150 ='+sm;
+           document.getElementById("quan3").value=+(+q-1);
+    }
+            function sp3(){
+               var q=document.getElementById("quantity3").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra3").innerHTML='<button id="sub" onclick="return sm3()">-</button><input type="number" id="quantity3" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp3()">+</button>*150 ='+sm;
+             document.getElementById("quan3").value=+(+q+1);
+    }
+            
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+            
+              function valid4(){
+                  
+                  var name4=document.getElementById("margharita").innerHTML.valueOf(); 
+                   document.getElementById("cart4").innerHTML=name4;
+                    var ra4=document.getElementById("rate").innerHTML.valueOf();
+                    var q4=document.getElementById("quan4").value;
+              
+               var price4=q4 * 150;
+            
+              
+           document.getElementById("ra4").innerHTML='<button id="sub" onclick="return sm4()">-</button><input type="number" id="quantity4"  value="'+q4+'" style="width:30px"><button id="sub" onclick="return sp4()">+</button>*150 ='+price4;
+           
+          
+          
+                    var img = new Image(); 
+           var div = document.getElementById('x4'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />'; 
+          div.innerHTML += '<button onclick="return remove4()" style="background-color:whitesmoke;color:red;">click to remove</button></td></tr></table> <hr>';
+ 
+                     }; 
+                        img.src = 'images/margharita.jpg'; 
+                        
+                        
+                          document.getElementById('added4').value ='ITEM ADDED ';
+                          
+                          
+                          document.getElementById("added4").onclick = function() {
+                          this.disabled = true;
+             }
+         }
+             function remove4() { 
+   
+                var remove=document.getElementById("cart4"); 
+                remove.parentNode.removeChild(remove); 
+                var rem=document.getElementById("x4"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra4"); 
+                remr.parentNode.removeChild(remr);
+                
+         alert("ITEM WILL BE REMOVED FROM CART");
+
+            }
+            function sm4(){
+               var q=document.getElementById("quantity4").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra4").innerHTML='<button id="sub" onclick="return sm4()">-</button><input type="number" id="quantity4" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp4()">+</button>*150 ='+sm;
+           document.getElementById("quan4").value=+(+q-1);
+    }
+            function sp4(){
+               var q=document.getElementById("quantity4").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra4").innerHTML='<button id="sub" onclick="return sm4()">-</button><input type="number" id="quantity4" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp4()">+</button>*150 ='+sm;
+            document.getElementById("quan4").value=+(+q+1);
+    }
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+            
+              function valid5(){
+                 
+                  var name5=document.getElementById("cheesepizza").innerHTML.valueOf(); 
+                   document.getElementById("cart5").innerHTML=name5;
+                    var ra5=document.getElementById("rate").innerHTML.valueOf();
+                    var q5=document.getElementById("quan5").value;
+              
+              var price5=q5 * 150;
+        
+           document.getElementById("ra5").innerHTML='<button id="sub" onclick="return sm5()">-</button><input type="number" id="quantity5"  value="'+q5+'" style="width:30px"><button id="sub" onclick="return sp5()">+</button>*150 ='+price5;
+           
+        
+           
+                    var img = new Image(); 
+           var div = document.getElementById('x5'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />'; 
+          div.innerHTML += '<button onclick="return remove5()" style="background-color:whitesmoke;color:red;">click to remove</button></td></tr></table><hr> ';
+ 
+                     }; 
+                        img.src = 'images/cheese.jpg'; 
+                        
+                        
+                          document.getElementById('added5').value ='ITEM ADDED ';
+                          
+                          
+                          document.getElementById("added5").onclick = function() {
+                        this.disabled = true;
+             }
+         }
+              function remove5() { 
+
+                var remove=document.getElementById("cart5"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x5"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra5"); 
+                remr.parentNode.removeChild(remr);
+           
+                alert("ITEM WILL BE REMOVED FROM CART");
+
+            } 
+            function sm5(){
+               var q=document.getElementById("quantity5").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra5").innerHTML='<button id="sub" onclick="return sm5()">-</button><input type="number" id="quantity5" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp5()">+</button>*150 ='+sm;
+           document.getElementById("quan5").value=+(+q-1);
+    }
+            function sp5(){
+               var q=document.getElementById("quantity5").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra5").innerHTML='<button id="sub" onclick="return sm5()">-</button><input type="number" id="quantity5" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp5()">+</button>*150 ='+sm;
+           document.getElementById("quan5").value=+(+q+1);
+    }
+            
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+            
+              function valid6(){
+             
+                  var name6=document.getElementById("chickengolden").innerHTML.valueOf(); 
+                   document.getElementById("cart6").innerHTML=name6;
+                    var ra6=document.getElementById("rate").innerHTML.valueOf();
+                    var q6=document.getElementById("quan6").value;
+              
+              var price6=q6 * 150;
+        
+        
+           document.getElementById("ra6").innerHTML='<button id="sub" onclick="return sm6()">-</button><input type="number" id="quantity6" value="'+q6+'" style="width:30px"><button id="sub" onclick="return sp6()">+</button>*150 ='+price6;
+           
+         
+          
+                    var img = new Image(); 
+           var div = document.getElementById('x6'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />'; 
+          div.innerHTML += '<button onclick="return remove6()" style="background-color:whitesmoke;color:red;">click to remove</button></td></tr></table><hr> ';
+ 
+                     }; 
+                        img.src = 'images/chickengolden.jpg'; 
+                        
+                        
+                          document.getElementById('added6').value ='ITEM ADDED ';
+                          
+                          
+                           document.getElementById("added6").onclick = function() {
+                       this.disabled = true;
+             } 
+         }
+              function remove6() { 
+
+                var remove=document.getElementById("cart6"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x6"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra6"); 
+                remr.parentNode.removeChild(remr);
+                 
+            alert("ITEM WILL BE REMOVED FROM CART");
+
+            } 
+            function sm6(){
+               var q=document.getElementById("quantity6").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra6").innerHTML='<button id="sub" onclick="return sm6()">-</button><input type="number" id="quantity6" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp6()">+</button>*150 ='+sm;
+           document.getElementById("quan6").value=+(+q-1);
+    }
+            function sp6(){
+               var q=document.getElementById("quantity6").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra6").innerHTML='<button id="sub" onclick="return sm6()">-</button><input type="number" id="quantity6" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp6()">+</button>*150 ='+sm;
+            document.getElementById("quan6").value=+(+q+1);
+    }
+            
+            
+ 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111           
+            
+              function valid7(){
+                 
+                  var name7=document.getElementById("mushroom").innerHTML.valueOf(); 
+                   document.getElementById("cart7").innerHTML=name7;
+                    var ra7=document.getElementById("rate").innerHTML.valueOf();
+                    var q7=document.getElementById("quan7").value;
+              
+              var price7=q7 * 150;
+         document.getElementById("ra7").innerHTML='<button id="sub" onclick="return sm7()">-</button><input type="number" id="quantity7" value="'+q7+'" style="width:30px"><button id="sub" onclick="return sp7()">+</button>*150 ='+price7;
+           
+        
+           
+                    var img = new Image(); 
+           var div = document.getElementById('x7'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />';
+          div.innerHTML += '<button onclick="return remove7()" style="background-color:whitesmoke;color:red;">click to remove</button></td></tr></table> <hr>';
+ 
+                     }; 
+ 
+                        img.src = 'images/mushroom.jpg'; 
+                        
+                        
+                          document.getElementById('added7').value ='ITEM ADDED ';
+                          
+                          
+                          document.getElementById("added7").onclick = function() {
+                         this.disabled = true;
+             }
+         }
+              function remove7() { 
+
+                var remove=document.getElementById("cart7"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x7"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra7"); 
+                remr.parentNode.removeChild(remr);
+                 alert("ITEM WILL BE REMOVED FROM CART");
+               
+                   } 
+            function sm7(){
+               var q=document.getElementById("quantity7").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra7").innerHTML='<button id="sub" onclick="return sm7()">-</button><input type="number" id="quantity7" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp7()">+</button>*150 ='+sm;
+           document.getElementById("quan7").value=+(+q-1);
+    }
+            function sp7(){
+               var q=document.getElementById("quantity7").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra7").innerHTML='<button id="sub" onclick="return sm7()">-</button><input type="number" id="quantity7" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp7()">+</button>*150 ='+sm;
+            document.getElementById("quan7").value=+(+q+1);
+    }
+            
+            
+  1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111          
+            
+            
+              function valid8(){
+                
+                  var name8=document.getElementById("paneer").innerHTML.valueOf(); 
+                   document.getElementById("cart8").innerHTML=name8;
+                    var ra8=document.getElementById("rate").innerHTML.valueOf();
+                    var q8=document.getElementById("quan8").value;
+              
+             var price8=q8 * 150;
+        
+        
+           document.getElementById("ra8").innerHTML='<button id="sub" onclick="return sm8()">-</button><input type="number" id="quantity8" value="'+q8+'" style="width:30px"><button id="sub" onclick="return sp8()">+</button>*150 ='+price8;
+           
+        
+           
+                    var img = new Image(); 
+           var div = document.getElementById('x8'); 
+                    img.onload = function() { 
+         div.innerHTML += '<table><tr><td><img src="'+img.src+'" height="50" width="50" />';
+          div.innerHTML += '<button onclick="return remove8()" style="background-color:whitesmoke;color:red;">click to remove</button></td></tr></table><hr> ';
+ 
+                     }; 
+                        img.src = 'images/paneer.jpg'; 
+                        
+                        
+                          document.getElementById('added8').value ='ITEM ADDED ';
+                          
+                          
+                 document.getElementById("added8").onclick = function() {
+                      this.disabled = true;
+             }
+         }
+            function remove8() { 
+
+                var remove=document.getElementById("cart8"); 
+                remove.parentNode.removeChild(remove); 
+                 var rem=document.getElementById("x8"); 
+                rem.parentNode.removeChild(rem);
+                 var remr=document.getElementById("ra8"); 
+                remr.parentNode.removeChild(remr);
+                  alert("ITEM WILL BE REMOVED FROM CART");
+        
+
+            }   
+            function sm8(){
+               var q=document.getElementById("quantity8").value; 
+             
+              var price=q * 150;
+              var sm=price-150;
+                document.getElementById("ra8").innerHTML='<button id="sub" onclick="return sm8()">-</button><input type="number" id="quantity8" value="'+(q-1)+'" style="width:30px"><button id="sub" onclick="return sp8()">+</button>*150 ='+sm;
+          document.getElementById("quan8").value=+(+q-1);
+    }
+            function sp8(){
+               var q=document.getElementById("quantity8").value; 
+              
+              var price=q * 150;
+              var sm=price+150;
+                document.getElementById("ra8").innerHTML='<button id="sub" onclick="return sm8()">-</button><input type="number" id="quantity8" value="'+(+q+1)+'" style="width:30px"><button id="sub" onclick="return sp8()">+</button>*150 ='+sm;
+            document.getElementById("quan8").value=+(+q+1);
+     }
+     function total(){
+         var q=document.getElementById("quantity").value;
+         var q1=document.getElementById("quantity1").value;
+         var q2=document.getElementById("quantity2").value;
+         var q3=document.getElementById("quantity3").value;
+         var q4=document.getElementById("quantity4").value;
+         var q5=document.getElementById("quantity5").value;
+         var q6=document.getElementById("quantity6").value;
+         var q7=document.getElementById("quantity7").value;
+         var q8=document.getElementById("quantity8").value;
+         var total=+q+q1+q2+q3+q4+q5+q6+q7+q8;
+          document.getElementById("total").innerHTML='<h1>TOTAL</h1>'+(+total);
+     }
+</script>
+    </head>
+    <body>
+        
+        <div class="cart">
+            <BR><BR>
+            <CENTER><H1 STYLE="color:red;"><B><U>CART</u></b></h1></CENTER>
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart"></h5>
+                    </td>
+                    <td> 
+                        <div id="ra"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x"></div>
+                    </td>
+                </tr>
+              
+                </table></center>
+           
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart1"></h5></td>
+                      <td><div id="ra1"></div> 
+                      </td></tr>
+                <tr>
+                    <td>
+                         <div id="x1"></div>
+                    </td>
+                </tr>
+              
+            </table></center>
+            
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart2"></h5></td>
+                     <td> <div id="ra2"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x2"></div>
+                    </td>
+                </tr>
+               
+            </table></center>
+           
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart3"></h5></td>
+                     <td> <div id="ra3"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x3"></div>
+                    </td>
+                </tr>
+                
+            </table></center>
+           
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart4"></h5></td>
+                     <td> <div id="ra4"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x4"></div>
+                    </td></tr>
+                </tr>
+                
+            </table></center>
+           
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart5"></h5></td>
+                     <td> <div id="ra5"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x5"></div>
+                    </td>
+                </tr>
+               
+            </table></center>
+           
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart6"></h5></td>
+                     <td> <div id="ra6"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x6"></div>
+                    </td>
+                </tr>
+              
+            </table></center>
+            
+            <center> <table>
+                <tr>
+                    <td>
+                        <h5 id="cart7"></h5></td>
+                     <td> <div id="ra7"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x7"></div>
+                    </td>
+                </tr>
+               
+            </table></center>
+           
+           <center>  <table>
+                <tr>
+                    <td>
+                        <h5 id="cart8"></h5></td>
+                     <td> <div id="ra8"></div> 
+                    </td></tr>
+                <tr>
+                    <td>
+                         <div id="x8"></div>
+                    </td>
+                </tr>
+              
+            </table></center>
+            
+            <center><p id="total"></p></center>
+        </div>
+   
+    <center><h1><b>ONLINE SHOPPING</b></h1></center>
+    <table>
+        <tr>
+            <td>
+                <div class="item1">
+            <center><p class="one" id="chicken">CHICKEN</p></center>
+            <center> <img id="myImg" src="images/images.jpg"  width="200" height="150"></center>
+            <center><table><tr><td><h3 id="rate">RS.150</h3></td><td><input type="number" id="quan"  max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+           <center> <input type="button" class="button" id="added" onclick="return valid()" value="ADD TO CART"></center>
+            <br>
+        </div>
+            </td>
+            <td>
+                <div class="item1">
+            <center><p class="two" id="chickenbread">CHICKEN BREAD</p></center>
+             <center> <img id="myImg" src="images/chickenbread.jpg"  width="200" height="150"></center>
+           <center><table><tr><td><h3 id="rate1">RS.150</h3></td><td><input type="number"  id="quan1" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+           <center><input type="button" class="button" id="added1" onclick="return valid1()" value="ADD TO CART"></center>
+            <br>
+        </div> 
+            </td>
+            <td>
+               <div class="item1">
+            <center><p class="three" id="tomato">TOMATO</p></center>
+             <center> <img id="myImg" src="images/tomato.jpg"  width="200" height="150"></center>
+               <center><table><tr><td><h3 id="rate2">RS.150</h3></td><td><input type="number"  id="quan2" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+            <center><input type="button" class="button" id="added2" onclick="return valid2()" value="ADD TO CART"></center>
+            <br>
+      </div> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="item1">
+            <center><p class="one" id="cheese">CHEESE</p></center>
+            <center> <img id="myImg" src="images/cheese.jpg"  width="200" height="150"></center>
+            <center><table><tr><td><h3 id="rate3">RS.150</h3></td><td><input type="number"  id="quan3" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+           <center> <input type="button" class="button" id="added3" onclick="return valid3()" value="ADD TO CART"></center>
+            <br>
+        </div>
+            </td>
+            <td>
+                <div class="item1">
+            <center><p class="two" id="margharita">MARGHARITA</p></center>
+             <center> <img id="myImg" src="images/margharita.jpg"  width="200" height="150"></center>
+      <center><table><tr><td><h3 id="rate4">RS.150</h3></td><td><input type="number"  id="quan4" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+           <center><input type="button" class="button" id="added4" onclick="return valid4()" value="ADD TO CART"></center>
+            <br>
+        </div> 
+            </td>
+            <td>
+               <div class="item1">
+            <center><p class="three" id="cheesepizza">CHEESE PIZZA</p></center>
+             <center> <img id="myImg" src="images/cheese.jpg"  width="200" height="150"></center>
+        <center><table><tr><td><h3 id="rate5">RS.150</h3></td><td><input type="number" id="quan5" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+            <center> <input type="button" class="button" id="added5" onclick="return valid5()" value="ADD TO CART"></center>
+             <br>
+      </div> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="item1">
+            <center><p class="one" id="chickengolden">CHICKEN GOLDEN</p></center>
+             <center> <img id="myImg" src="images/chickengolden.jpg"  width="200" height="150"></center>
+            <center><table><tr><td><h3 id="rate6">RS.150</h3></td><td><input type="number"  id="quan6" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+            <center><input type="button" class="button" id="added6" onclick="return valid6()" value="ADD TO CART"></center>
+             <br>
+        </div>
+            </td>
+            <td>
+                <div class="item1">
+            <center><p class="two" id="mushroom">MUSHROOM</p></center>
+             <center> <img id="myImg" src="images/mushroom.jpg"  width="200" height="150"></center>
+   <center><table><tr><td><h3 id="rate7">RS.150</h3></td><td><input type="number" id="quan7" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+           <center> <input type="button" class="button" id="added7" onclick="return valid7()" value="ADD TO CART"></center>
+             <br>
+        </div> 
+            </td>
+            <td>
+               <div class="item1">
+            <center><p class="three" id="paneer">PANEER</p></center>
+             <center> <img id="myImg" src="images/paneer.jpg"  width="200" height="150"></center>
+   <center><table><tr><td><h3 id="rate8">RS.150</h3></td><td><input type="number"  id="quan8" max="99" min="1" value="1" style="width:30px"></td></tr></table></center>
+           <center><input type="button" class="button" id="added8" onclick="return valid8()" value="ADD TO CART"></center>
+             <br>
+      </div> 
+            </td>
+        </tr>
+    </table>    
+    </body>
+</html>
